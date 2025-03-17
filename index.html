@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Toon Selector</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap" rel="stylesheet">
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <div class="">
+        <p class="header">Random Toon Selector</p>
+        <p class="long-text">
+            For a HARDER challenge, consider using the trinkets, get the items and reach the indicated floor as well!
+        </p>
+        <p class="long-text">
+            To do that, mark the checkbox bellow.
+        </p>
+    </div>
+
+    <div class="container">
+        <div class="random-card">
+            <div class="basic-mode">
+                <img id="random-toon-image" src="/Toons/Dandy_Render.webp" alt="">
+                <p id="random-toon-name">Dandy</p>
+            </div>
+
+            <div class="hard-mode" id="hard-mode" style="display: none;">
+                <p id="random-floor">Target Floor: 30</p>
+                <img class="random-trinket" id="random-trinket-1" src="/Trinkets/Vee_Remote.webp" alt="">
+                <img class="random-trinket" id="random-trinket-2" src="/Trinkets/Pink_Bow.webp" alt="">
+                <div>
+                    <img src="/Items/Health_Kit.webp" alt="" class="random-item" id="random-item-1">
+                    <img src="/Items/Valve.webp" alt="" class="random-item" id="random-item-2">
+                    <img src="/Items/Eject_Button.webp" alt="" class="random-item" id="random-item-3">
+                </div>
+            </div>
+
+            <div class="options">
+                <button onclick="randomizer()" class="randomizer-button">Good luck!</button>
+                <input type="checkbox" id="hard-mode-checkbox" onclick="displayHardModeDiv()">
+            </div>
+        </div>
+    </div>
+</body>
+
+<audio id="audio-1" src="/AUDIO/Sound1.ogg"></audio>
+</html>
