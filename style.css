@@ -11,19 +11,25 @@
 :root{
     --gradient: linear-gradient(
         45deg, red, purple, blue
-    )
+    );
+    --toon-image-size: 100px;
+    --toon-name-size: 2.2rem;
+    --target-floor-text-size: 1.3rem;
+    --trinkets-scale: scale(0.8);
+    --random-item-scale: scale(0.6)
 }
 
 .header{
     text-align: center;
-    font-size: 5rem;
+    font-size: 2.3rem;
     font-weight: 900;
 }
 
 .long-text{
-    text-align: center;
-    font-size: 2.5rem;
+    text-align: left;
+    font-size: 1.5rem;
     font-weight: 600;
+    padding: 0.5rem;
 }
 
 .container{
@@ -34,7 +40,7 @@
     height: 100vh;
 
     background-image: var(--gradient);
-    background-size: 200%;
+    background-size: 150%;
     animation: bg-color 10s infinite alternate;
 }
 
@@ -51,25 +57,26 @@
 .random-card{
     border: 7.5px outset hsla(0, 0%, 100%, 0.4);
     border-radius: 5px;
-    background-color: hsla(0, 0%, 100%, 0.4);
+    background-color: hsla(0, 0%, 100%, 0.25);
 
     margin: 2rem;
+    min-width: 310px;
 
-    width: 550px;
-    max-width: 60%;
     text-align: center;
 }
 
 .random-card p{
-    font-size: 4rem;
-    font-weight: 900;
+    font-size: var(--toon-name-size);
+    font-weight: 700;
+    padding: 5px;
+    
 
     transition: 0.3s ease;
 }
 
 .random-card #random-toon-image{
-    width: 150px;
-    height: 150px;
+    width: var(--toon-image-size);
+    height: var(--toon-image-size);
 
     margin-top: 0.5rem;
 
@@ -77,21 +84,22 @@
 }
 
 #random-floor{
-    font-size: 2rem;
+    font-size: var(--target-floor-text-size);
 }
 
 .random-trinket{
+    transform: var(--trinkets-scale);
     transition: 0.2s ease-in-out;
 }
 
 .random-item{
-    transform: scale(0.8);
+    transform: var(--random-item-scale);
     transition: 0.3s ease-in-out;
 }
 
 .randomizer-button{
     cursor: pointer;
-    font-size: 2rem;
+    font-size: 1rem;
     font-weight: 900;
     text-align: center;
 
@@ -113,7 +121,7 @@
 
 #hard-mode-checkbox{
     cursor: pointer;
-    transform: scale(3);
+    transform: scale(2);
     margin: 2rem;
 }
 
